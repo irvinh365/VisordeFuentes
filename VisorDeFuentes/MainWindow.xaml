@@ -29,7 +29,7 @@
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            />
-                <TextBox/>
+               
             </DockPanel>
             
         </Border>
@@ -44,7 +44,7 @@
                <ComboBox x:Name="fuenteComboBox"
                          VerticalAlignment="Top"
                          Margin="4"
-                         SelectedIndex="0">
+                         SelectedIndex="0" SelectionChanged="fuenteComboBox_SelectionChanged">
 
                 <ComboBoxItem Content="Arial"/>
                 <ComboBoxItem Content="Consolas"/>
@@ -65,11 +65,13 @@
                 <CheckBox Content="Cursiva"
                           Margin="8,8,8,4"
                           IsChecked="False"
-                          x:Name="cursivaCheckbox"/>
+                          x:Name="cursivaCheckbox" Checked="cursivaCheckbox_Checked" Unchecked="cursivaCheckbox_Unchecked"/>
                 <CheckBox Content="Negitas"
                           Margin="8,4,8,8"
                           IsChecked="False"
-                          x:Name="negritasCheckbox"/>
+                          x:Name="negritasCheckbox"
+                          Checked="negritasCheckbox_Checked"
+                          Unchecked="negritasCheckbox_Unchecked"/>
             </StackPanel>
             
         </GroupBox>
@@ -86,15 +88,18 @@
                 <RadioButton x:Name="smallRadioButton"
                              Content="Pequeña"
                              Margin="8,8,8,4"
-                             IsChecked="True"/>
+                             IsChecked="True"
+                             Checked="tamanioRadioButton_Checked"/>
                 <RadioButton x:Name="mediumRadioButton"
                              Content="Mediana"
                              Margin="8,4,8,4"
-                             IsChecked="False"/>
+                             IsChecked="False" 
+                             Checked="tamanioRadioButton_Checked"/>
                 <RadioButton x:Name="largeRadioButton"
                              Content="Grande"
                              Margin="8,4,8,8"
-                             IsChecked="False"/>
+                             IsChecked="False" 
+                             Checked="tamanioRadioButton_Checked"/>
             </StackPanel>
         </GroupBox>
         
